@@ -8,9 +8,11 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 Future<void> main() async {
   await MainBinding().dependencies();
+  setPathUrlStrategy();
   LoadingUtils.config();
   runApp(const MyApp());
 }
