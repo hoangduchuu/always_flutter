@@ -1,5 +1,7 @@
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/route/routes.dart';
+import 'package:developerfect_app/utils/loading_utils.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +10,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   runApp(const MyApp());
-  configLoading();
+  LoadingUtils.config();
 }
 
 class MyApp extends StatelessWidget {
@@ -22,6 +24,14 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
+        scrollBehavior: MaterialScrollBehavior().copyWith(
+          dragDevices: {
+            PointerDeviceKind.mouse,
+            PointerDeviceKind.touch,
+            PointerDeviceKind.stylus,
+            PointerDeviceKind.unknown
+          },
+        ),
         builder: (context, child) {
           var widget = EasyLoading.init()(context, child);
           return ResponsiveBreakpoints.builder(
@@ -41,20 +51,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-void configLoading() {
-  EasyLoading.instance
-    ..displayDuration = const Duration(milliseconds: 2000)
-    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
-    ..loadingStyle = EasyLoadingStyle.dark
-    ..indicatorSize = 45.0
-    ..radius = 10.0
-    ..progressColor = Colors.yellow
-    ..backgroundColor = Colors.green
-    ..indicatorColor = Colors.yellow
-    ..textColor = Colors.yellow
-    ..maskColor = Colors.blue.withOpacity(0.5)
-    ..userInteractions = true
-    ..dismissOnTap = false;
 }

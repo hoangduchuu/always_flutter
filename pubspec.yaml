@@ -41,6 +41,8 @@ dependencies:
   dio: ^5.4.3+1
   flutter_easyloading: ^3.0.5
   lottie: ^3.1.1
+  flex_color_scheme: ^7.3.1
+  logger: ^2.3.0
 
 dev_dependencies:
   flutter_test:

@@ -4,7 +4,7 @@ import 'package:lottie/lottie.dart';
 
 import 'splash_controller.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends GetWidget<SplashController> {
   const SplashScreen({super.key});
 
   @override

@@ -1,23 +1,28 @@
+import 'package:developerfect_app/ui/item/user_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'home_page_controller.dart';
 
-class HomePageScreen extends StatelessWidget {
+class HomePageScreen extends GetWidget<HomePageController> {
   const HomePageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<HomePageController>();
-    final binding = Get.find<HomePageController>().binding;
+    final c = Get.find<HomePageController>();
+    final b = Get.find<HomePageController>().binding;
 
-    return Scaffold(
-      body: Container(
-        color: Colors.redAccent,
-        child: const Center(
-          child: Text('Home Page'),
+    return Obx(() {
+      return Scaffold(
+        body: ListView.builder(
+          shrinkWrap: true,
+          physics: const AlwaysScrollableScrollPhysics(), // new
+          itemCount: b.users.length,
+          itemBuilder: (context, index) {
+            return UserItem(user: b.users[index]);
+          },
         ),
-      ),
-    );
+      );
+    });
   }
 }
