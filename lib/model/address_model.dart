@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:xemxongxoa/model/geo_model.dart';
+import 'package:developerfect_app/model/geo_model.dart';
 
 class AddressModel {
   final String street;

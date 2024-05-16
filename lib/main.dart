@@ -1,11 +1,10 @@
+import 'package:developerfect_app/route/route_name.dart';
+import 'package:developerfect_app/route/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:xemxongxoa/route/route_name.dart';
-import 'package:xemxongxoa/route/routes.dart';
-
 
 void main() {
   runApp(const MyApp());

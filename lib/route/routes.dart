@@ -1,10 +1,10 @@
+import 'package:developerfect_app/main_binding.dart';
+import 'package:developerfect_app/route/route_name.dart';
+import 'package:developerfect_app/ui/screen/home_page/home_page_binding.dart';
+import 'package:developerfect_app/ui/screen/home_page/home_page_screen.dart';
+import 'package:developerfect_app/ui/screen/splash/splash_binding.dart';
+import 'package:developerfect_app/ui/screen/splash/splash_screen.dart';
 import 'package:get/get.dart';
-import 'package:xemxongxoa/main_binding.dart';
-import 'package:xemxongxoa/route/route_name.dart';
-import 'package:xemxongxoa/ui/screen/home_page/home_page_binding.dart';
-import 'package:xemxongxoa/ui/screen/home_page/home_page_screen.dart';
-import 'package:xemxongxoa/ui/screen/splash/splash_binding.dart';
-import 'package:xemxongxoa/ui/screen/splash/splash_screen.dart';
 
 final routes = [
   GetPage(

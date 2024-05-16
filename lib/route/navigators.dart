@@ -1,5 +1,5 @@
+import 'package:developerfect_app/route/route_name.dart';
 import 'package:get/get.dart';
-import 'package:xemxongxoa/route/route_name.dart';
 
 class AppNavigators {
   static Future<dynamic>? gotoHome() {

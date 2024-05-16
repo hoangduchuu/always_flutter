@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:xemxongxoa/model/address_model.dart';
-import 'package:xemxongxoa/model/company_model.dart';
+import 'package:developerfect_app/model/address_model.dart';
+import 'package:developerfect_app/model/company_model.dart';
 
 class UserModel {
   final int id;

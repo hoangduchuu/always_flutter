@@ -1,4 +1,4 @@
-package com.example.xemxongxoa
+package com.example.developerfect_app
 
 import io.flutter.embedding.android.FlutterActivity
 

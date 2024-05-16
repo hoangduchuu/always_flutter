@@ -1,5 +1,5 @@
+import 'package:developerfect_app/route/navigators.dart';
 import 'package:get/get.dart';
-import 'package:xemxongxoa/route/navigators.dart';
 
 import 'splash_binding.dart';
 
