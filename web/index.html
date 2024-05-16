@@ -34,5 +34,29 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBZ1s736wDvhZjzsMzkGj3FpWU49FRsC0Q",
+    authDomain: "exci-f5917.firebaseapp.com",
+    databaseURL: "https://exci-f5917-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "exci-f5917",
+    storageBucket: "exci-f5917.appspot.com",
+    messagingSenderId: "556564038150",
+    appId: "1:556564038150:web:c8d30972b4916222033987",
+    measurementId: "G-WK8CSED3MN"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
