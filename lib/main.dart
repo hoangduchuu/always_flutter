@@ -1,3 +1,4 @@
+import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/route/routes.dart';
 import 'package:developerfect_app/utils/loading_utils.dart';
@@ -8,9 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await MainBinding().dependencies();
   LoadingUtils.config();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
         //region routes configs
         getPages: routes,
         initialRoute: RouteName.splash,
+        initialBinding: MainBinding(),
         //region theme configs
       ),
     );

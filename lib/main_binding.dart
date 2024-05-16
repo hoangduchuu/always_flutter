@@ -23,6 +23,9 @@ class MainBinding extends Bindings {
       }
       return dio;
     }, permanent: true);
-    Get.put(HTTPProvider(), permanent: true);
+    // Ensure HTTPProvider is put properly
+    if (!Get.isRegistered<HTTPProvider>()) {
+      Get.put(HTTPProvider(), permanent: true);
+    }
   }
 }
