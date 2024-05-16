@@ -2,6 +2,9 @@ import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/ui/screen/home_page/home_page_binding.dart';
 import 'package:developerfect_app/ui/screen/home_page/home_page_screen.dart';
+import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_binding.dart';
+import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_controller.dart';
+import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_screen.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_binding.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_screen.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_binding.dart';
@@ -41,6 +44,15 @@ final routes = [
     bindings: [
       MainBinding(),
       UserDetailBinding(),
+    ],
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: RouteName.quiz,
+    page: () =>  QuizScreen(),
+    bindings: [
+      MainBinding(),
+      QuizBinding(),
     ],
     transition: Transition.fadeIn,
   ),

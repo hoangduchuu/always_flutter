@@ -1,3 +1,4 @@
+import 'package:developerfect_app/route/navigators.dart';
 import 'package:developerfect_app/ui/item/user_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +15,14 @@ class HomePageScreen extends GetWidget<HomePageController> {
 
     return Obx(() {
       return Scaffold(
+        appBar: AppBar(title: Text('Home Page'), actions: [
+          IconButton(
+            icon: Icon(Icons.quiz),
+            onPressed: () {
+              AppNavigators.gotoQuiz();
+            },
+          ),
+        ]),
         body: ListView.builder(
           shrinkWrap: true,
           physics: const AlwaysScrollableScrollPhysics(), // new

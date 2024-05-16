@@ -3,4 +3,5 @@ class RouteName {
   static const String home = '/home';
   static const String user = '/user';
   static const String userUserId = '/user/:userId';
+  static const String quiz = '/quiz';
 }

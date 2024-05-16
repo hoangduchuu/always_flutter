@@ -13,4 +13,5 @@ class UserDetailBinding extends Bindings {
   }
 
   Rxn<UserModel> user = Rxn(null);
+  RxString errorMsg = ''.obs;
 }
