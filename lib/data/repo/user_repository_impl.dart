@@ -1,9 +1,7 @@
-import 'dart:convert';
 
 import 'package:developerfect_app/data/api/network_client.dart';
 import 'package:developerfect_app/domain/user_repository.dart';
 import 'package:developerfect_app/model/user_model.dart';
-import 'package:developerfect_app/utils/log/my_logger.dart';
 import 'package:get/get.dart';
 
 class UserRepositoryImpl implements UserRepository {

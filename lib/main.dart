@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
-        scrollBehavior: MaterialScrollBehavior().copyWith(
+        scrollBehavior: const MaterialScrollBehavior().copyWith(
           dragDevices: {
             PointerDeviceKind.mouse,
             PointerDeviceKind.touch,

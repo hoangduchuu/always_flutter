@@ -1,6 +1,5 @@
 // ignore_for_file: dead_code
 
-import 'dart:convert';
 
 import 'package:dio/dio.dart' as dio;
 import 'package:get/get.dart';

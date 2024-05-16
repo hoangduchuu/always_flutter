@@ -6,7 +6,7 @@ class LoadingUtils {
     if (msg != null) {
       EasyLoading.show(status: msg.toString());
     } else {
-      EasyLoading.show(maskType: EasyLoadingMaskType.black, indicator: Text('Loading...'));
+      EasyLoading.show(maskType: EasyLoadingMaskType.black, indicator: const Text('Loading...'));
     }
   }
 
@@ -30,7 +30,7 @@ class LoadingUtils {
       ..boxShadow = []
       ..indicatorColor = Colors.transparent
       ..textColor = Colors.red
-      ..textStyle = TextStyle(fontWeight: FontWeight.bold, color: Colors.green)
+      ..textStyle = const TextStyle(fontWeight: FontWeight.bold, color: Colors.green)
       ..maskColor = Colors.transparent
       ..userInteractions = true
       ..dismissOnTap = false;
