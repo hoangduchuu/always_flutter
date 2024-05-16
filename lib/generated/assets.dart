@@ -4,5 +4,6 @@ class Assets {
 
   static const String iconsBg = 'assets/icons/bg.svg';
   static const String iconsClock = 'assets/icons/clock.svg';
+  static const String iconsHeydevIcon = 'assets/icons/heydev_icon.jpeg';
 
 }

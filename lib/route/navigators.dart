@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class AppNavigators {
   static Future<dynamic>? gotoHome() {
-    return Get.toNamed(RouteName.home);
+    return Get.offAllNamed(RouteName.home);
   }
 
   static Future<dynamic>? gotoUserDetail({required String userId}) {

@@ -36,6 +36,7 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: kDefaultPadding),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: ProgressBar(),
@@ -47,11 +48,11 @@ class Body extends StatelessWidget {
                   () => Text.rich(
                     TextSpan(
                       text: "Question ${_questionController.questionNumber.value}",
-                      style: TextStyle(color: Colors.purple),
+                      style: TextStyle(color: Colors.white),
                       children: [
                         TextSpan(
                           text: "/${_questionController.questions.length}",
-                          style: TextStyle(color: Colors.purple),
+                          style: TextStyle(color: Colors.white),
                         ),
                       ],
                     ),

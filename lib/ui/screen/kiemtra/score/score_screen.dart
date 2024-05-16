@@ -37,10 +37,13 @@ class ScoreScreen extends StatelessWidget {
               Text("${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
                   style: TextStyle(color: kSecondaryColor, fontSize: 18.sp)),
               Spacer(flex: 3),
-              ElevatedButton(onPressed: (){
-                Get.close(2);
-                AppNavigators.gotoHome();
-              }, child: Text('Restart Quiz'))
+              ElevatedButton(
+                  onPressed: () {
+                    Get.close(2);
+                    AppNavigators.gotoHome();
+                  },
+                  child: Text('Restart Quiz')),
+              SizedBox(height: 50.h),
             ],
           )
         ],
