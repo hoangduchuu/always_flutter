@@ -6,7 +6,6 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:xemxongxoa/route/route_name.dart';
 import 'package:xemxongxoa/route/routes.dart';
 
-import 'ui/screen/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

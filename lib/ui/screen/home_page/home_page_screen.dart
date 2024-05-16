@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'home_page_controller.dart';
 
 class HomePageScreen extends StatelessWidget {
-  const HomePageScreen({Key? key}) : super(key: key);
+  const HomePageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class HomePageScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         color: Colors.redAccent,
-        child: Center(
+        child: const Center(
           child: Text('Home Page'),
         ),
       ),
