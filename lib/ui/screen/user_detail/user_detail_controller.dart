@@ -25,7 +25,6 @@ class UserDetailController extends GetxController {
   }
 
   Future<void> getUser() async {
-    await Future.delayed(const Duration(milliseconds: 50));
     _userRepository.getUser(userId: userId!).then((value) {
       binding.user.value = value;
     }).catchError((onError) {

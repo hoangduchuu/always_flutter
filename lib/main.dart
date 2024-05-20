@@ -2,6 +2,7 @@ import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/route/routes.dart';
 import 'package:developerfect_app/utils/loading_utils.dart';
+import 'package:developerfect_app/utils/style/style.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: appLightTheme,
+        darkTheme: appLightTheme,
         scrollBehavior: const MaterialScrollBehavior().copyWith(
           dragDevices: {
             PointerDeviceKind.mouse,
