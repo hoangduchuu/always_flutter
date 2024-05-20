@@ -22,7 +22,7 @@ class UserItem extends StatelessWidget {
         subtitle: Text(user.email),
         leading: CircleAvatar(
           child: 1 == 1
-              ? Image.network('https://picsum.photos/id/${Random().nextInt(10)}/200/200/')
+              ? Image.network(user.avatar)
               : Text(
                   '${user.name[0].toUpperCase()}${user.name.split('').last[0].toUpperCase()}',
                 ),

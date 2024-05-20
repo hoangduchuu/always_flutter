@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:developerfect_app/model/address_model.dart';
 import 'package:developerfect_app/model/company_model.dart';
@@ -11,6 +12,7 @@ class UserModel {
   final AddressModel address;
   final String phone;
   final String website;
+  final String avatar;
   final CompanyModel company;
 
   UserModel({
@@ -21,6 +23,7 @@ class UserModel {
     required this.address,
     required this.phone,
     required this.website,
+    required this.avatar,
     required this.company,
   });
 
@@ -32,6 +35,7 @@ class UserModel {
     AddressModel? address,
     String? phone,
     String? website,
+    String? avatar,
     CompanyModel? company,
   }) =>
       UserModel(
@@ -42,6 +46,7 @@ class UserModel {
         address: address ?? this.address,
         phone: phone ?? this.phone,
         website: website ?? this.website,
+        avatar: avatar ?? this.avatar,
         company: company ?? this.company,
       );
 
@@ -57,6 +62,7 @@ class UserModel {
         address: AddressModel.fromMap(json["address"]),
         phone: json["phone"],
         website: json["website"],
+        avatar: 'https://picsum.photos/id/${Random().nextInt(10)}/200/200/', // FIXME: update value
         company: CompanyModel.fromMap(json["company"]),
       );
 
@@ -68,6 +74,7 @@ class UserModel {
         "address": address.toMap(),
         "phone": phone,
         "website": website,
+        "avatar": avatar,
         "company": company.toMap(),
       };
 }
