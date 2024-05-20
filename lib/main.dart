@@ -2,6 +2,7 @@ import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/route/routes.dart';
 import 'package:developerfect_app/utils/loading_utils.dart';
+import 'package:developerfect_app/utils/pref_utils.dart';
 import 'package:developerfect_app/utils/style/style.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ import 'package:url_strategy/url_strategy.dart';
 
 Future<void> main() async {
   await MainBinding().dependencies();
+  WidgetsFlutterBinding.ensureInitialized();
+  await PrefsUtils.init();
   setPathUrlStrategy();
   LoadingUtils.config();
   runApp(const MyApp());

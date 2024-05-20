@@ -1,14 +1,15 @@
 // ignore_for_file: dead_code
 
-import 'package:developerfect_app/data/custom_exception.dart';
 import 'package:dio/dio.dart' as dio;
 import 'package:get/get.dart';
 
-class HTTPProvider {
-  final dio.Dio _dio = Get.find<dio.Dio>();
+import '../custom_exception.dart';
+
+class DummyHTTPProvider {
+  final dio.Dio _dio = Get.find<dio.Dio>(tag: 'dummy');
 
   void updateBaseUrl() {
-    _dio.options.baseUrl = 'https://jsonplaceholder.typicode.com/';
+    _dio.options.baseUrl = 'https://dummyjson.com';
   }
 
   Future<dynamic> makeGet(

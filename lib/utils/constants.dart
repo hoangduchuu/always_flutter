@@ -12,3 +12,16 @@ const kPrimaryGradient = LinearGradient(
 );
 
 const double kDefaultPadding = 20.0;
+
+
+
+class PrefKeys {
+  static String userToken = 'prefKey_userToken';
+  static String serverName = 'prefKey_serverName';
+  static String appLanguage = 'prefKey_appLanguage';
+  static String refreshToken = 'prefKey_refreshToken';
+  static String userId = 'prefKey_userId';
+
+  static String androidDeviceFrequency = 'android_device_device_frequency';
+  static String androidDeviceCommunicationType = 'android_device_communication_type';
+}

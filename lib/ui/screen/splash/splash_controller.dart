@@ -11,9 +11,9 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     LoadingUtils.showProgress();
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       LoadingUtils.dismiss();
-      AppNavigators.gotoHome();
+      AppNavigators.gotoLogin();
     });
   }
 }

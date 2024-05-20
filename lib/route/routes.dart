@@ -1,5 +1,7 @@
 import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
+import 'package:developerfect_app/ui/screen/auth/login/login_binding.dart';
+import 'package:developerfect_app/ui/screen/auth/login/login_screen.dart';
 import 'package:developerfect_app/ui/screen/home_page/home_page_binding.dart';
 import 'package:developerfect_app/ui/screen/home_page/home_page_screen.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_binding.dart';
@@ -49,10 +51,19 @@ final routes = [
   ),
   GetPage(
     name: RouteName.quiz,
-    page: () =>  QuizScreen(),
+    page: () => QuizScreen(),
     bindings: [
       MainBinding(),
       QuizBinding(),
+    ],
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: RouteName.login,
+    page: () => const LoginScreen(),
+    bindings: [
+      MainBinding(),
+      LoginBinding(),
     ],
     transition: Transition.fadeIn,
   ),

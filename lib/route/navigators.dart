@@ -13,4 +13,8 @@ class AppNavigators {
   static Future<dynamic>? gotoQuiz() {
     return Get.toNamed(RouteName.quiz);
   }
+
+  static Future<dynamic>? gotoLogin() {
+    return Get.toNamed(RouteName.login);
+  }
 }
