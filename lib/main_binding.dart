@@ -49,6 +49,7 @@ class MainBinding extends Bindings {
     //region Ensure HTTPProvider is put properly
     if (!Get.isRegistered<HTTPProvider>()) {
       Get.put(HTTPProvider(), permanent: true);
+      Get.put(DummyHTTPProvider(), permanent: true,tag: 'dummy');
     }
     //endregion Ensure HTTPProvider is put properly
   }

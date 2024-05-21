@@ -7,4 +7,6 @@ abstract class UserRepository {
   Future<UserModel> getUser({required String userId});
 
   Future<DummyUserModel> login({required String email, required String password});
+
+  Future<DummyUserModel> getDumMe();
 }

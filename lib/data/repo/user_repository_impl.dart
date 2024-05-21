@@ -27,4 +27,10 @@ class UserRepositoryImpl implements UserRepository {
     var data = await _dummyclient.makePost('/auth/login', data: body);
     return DummyUserModel.fromJson(data);
   }
+
+  @override
+  Future<DummyUserModel> getDumMe() async {
+    var data = await _dummyclient.makeGet('/auth/me');
+    return DummyUserModel.fromJson(data);
+  }
 }

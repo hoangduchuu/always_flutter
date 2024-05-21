@@ -1,6 +1,8 @@
 // ignore_for_file: dead_code
 
+import 'package:developerfect_app/utils/pref_utils.dart';
 import 'package:dio/dio.dart' as dio;
+import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 import '../custom_exception.dart';
@@ -21,8 +23,16 @@ class DummyHTTPProvider {
     bool? ignoreError,
   }) async {
     try {
+      var opt = Options(
+        headers: {
+          'Authorization': 'Bearer ${appPrefs.userToken}',
+        },
+      );
       var response = await _dio.get(path,
-          queryParameters: query, options: options, cancelToken: cancelToken, onReceiveProgress: onReceiveProgress);
+          queryParameters: query,
+          options: options ?? opt,
+          cancelToken: cancelToken,
+          onReceiveProgress: onReceiveProgress);
       return response.data;
     } catch (e) {
       _handleException(e);
@@ -37,8 +47,13 @@ class DummyHTTPProvider {
       dio.ProgressCallback? onSendProgress,
       dio.ProgressCallback? onReceiveProgress}) async {
     try {
+      var opt = Options(
+        headers: {
+          'Authorization': 'Bearer ${appPrefs.userToken}',
+        },
+      );
       var response = await _dio.post(path,
-          options: options,
+          options: options ?? opt,
           data: data,
           queryParameters: queryParameters,
           cancelToken: cancelToken,

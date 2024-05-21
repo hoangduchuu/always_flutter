@@ -18,4 +18,10 @@ class LoginController extends GetxController {
       appPrefs.userToken = '${dummyUser.token}';
     });
   }
+
+  void getMe() {
+    _userRepository.getDumMe().then((dummyUser) {
+      MyLogger.d('getMe success ${dummyUser.toString()}');
+    });
+  }
 }

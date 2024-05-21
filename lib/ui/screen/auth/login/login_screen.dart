@@ -23,6 +23,12 @@ class LoginScreen extends GetWidget<LoginController> {
               },
               child: const Text('Login'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                controller.getMe();
+              },
+              child: const Text('getMe'),
+            ),
           ],
         ),
       )
