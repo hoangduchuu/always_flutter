@@ -7,6 +7,8 @@ import 'package:developerfect_app/ui/screen/home_page/home_page_screen.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_binding.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_controller.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/quiz_screen.dart';
+import 'package:developerfect_app/ui/screen/profile/profile_binding.dart';
+import 'package:developerfect_app/ui/screen/profile/profile_screen.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_binding.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_screen.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_binding.dart';
@@ -64,6 +66,15 @@ final routes = [
     bindings: [
       MainBinding(),
       LoginBinding(),
+    ],
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: RouteName.profile,
+    page: () => const ProfileScreen(),
+    bindings: [
+      MainBinding(),
+      ProfileBinding(),
     ],
     transition: Transition.fadeIn,
   ),

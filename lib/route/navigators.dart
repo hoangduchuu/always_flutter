@@ -17,4 +17,8 @@ class AppNavigators {
   static Future<dynamic>? gotoLogin() {
     return Get.toNamed(RouteName.login);
   }
+
+  static Future<dynamic>? gotoProfile() {
+    return Get.toNamed(RouteName.profile);
+  }
 }

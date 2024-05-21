@@ -40,9 +40,10 @@ class HomePageScreen extends GetWidget<HomePageController> {
                       ),
                     ),
                     ListTile(
-                      title: const Text('Item 1'),
+                      title: const Text('Go to Profile'),
                       onTap: () {
-                        Navigator.pop(context);
+                        Get.back();
+                        AppNavigators.gotoProfile();
                       },
                     ),
                     ListTile(
