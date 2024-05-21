@@ -3,6 +3,7 @@ import 'package:developerfect_app/data/api/network_client.dart';
 import 'package:developerfect_app/utils/configs.dart';
 import 'package:developerfect_app/utils/log/dio_logger.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 
 class MainBinding extends Bindings {
@@ -52,5 +53,6 @@ class MainBinding extends Bindings {
       Get.put(DummyHTTPProvider(), permanent: true,tag: 'dummy');
     }
     //endregion Ensure HTTPProvider is put properly
+    FlutterNativeSplash.remove();
   }
 }

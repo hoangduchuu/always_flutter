@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 
 class LoadingUtils {
   static void showProgress({Object? msg}) {
@@ -15,7 +16,8 @@ class LoadingUtils {
   }
 
   static void showSuccessMessage(String msg, {Duration? duration}) {
-    EasyLoading.showSuccess(msg, duration: duration ?? const Duration(milliseconds: 2000));
+    Get.snackbar('Success', msg, snackPosition: SnackPosition.BOTTOM, duration: duration ?? const Duration(milliseconds: 2000));
+    // EasyLoading.showSuccess(msg, duration: duration ?? const Duration(milliseconds: 2000));
   }
 
   static void config() {

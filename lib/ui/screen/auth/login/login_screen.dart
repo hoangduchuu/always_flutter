@@ -25,7 +25,7 @@ class LoginScreen extends GetWidget<LoginController> {
             ),
             ElevatedButton(
               onPressed: () {
-                controller.getMe();
+                controller.getUserAndNavigateHome();
               },
               child: const Text('getMe'),
             ),
