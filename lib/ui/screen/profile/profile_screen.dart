@@ -1,4 +1,5 @@
 import 'package:developerfect_app/ui/item/toolbar_item.dart';
+import 'package:developerfect_app/ui/screen/profile/m/body.dart';
 import 'package:developerfect_app/ui/widget/dark_mode_widget.dart';
 import 'package:developerfect_app/ui/widget/toolbar_text_widget.dart';
 import 'package:developerfect_app/utils/constants.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:responsive_framework/responsive_framework.dart' as rf;
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'profile_controller.dart';
@@ -30,21 +32,7 @@ class ProfileScreen extends StatelessWidget {
         title: _appBarContent(context),
       ),
       endDrawer: _endDrawer(context),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Profile Page',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Logout'),
-            ),
-          ],
-        ),
-      ),
+      body: Body(),
     );
   }
 
@@ -71,14 +59,12 @@ class ProfileScreen extends StatelessWidget {
   Widget _toolbarItems() {
     return Row(
       children: [
-        ..._generateToolbarItem()
-            .map(
-              (e) => Padding(
-                padding: EdgeInsets.only(left: 8.w),
-                child: ToolbarTextWidget(text: e.text, onTap: e.onTap),
-              ),
-            )
-            ,
+        ..._generateToolbarItem().map(
+          (e) => Padding(
+            padding: EdgeInsets.only(left: 8.w),
+            child: ToolbarTextWidget(text: e.text, onTap: e.onTap),
+          ),
+        ),
         Gap(24.w),
         const DarkModeWidget()
       ],
@@ -101,7 +87,7 @@ class ProfileScreen extends StatelessWidget {
   }
 
   _endDrawer(BuildContext context) {
-    if(context.isDisplayLargeThanTablet) return null;
+    if (context.isDisplayLargeThanTablet) return null;
     return Drawer(
       child: Column(
         children: [
@@ -109,21 +95,42 @@ class ProfileScreen extends StatelessWidget {
           ..._generateToolbarItem()
               .map(
                 (e) => ListTile(
-              title: Text(e.text),
-              onTap: () {
-                // _onItemClicked(e, context);
-              },
-            ),
-          )
+                  title: Text(e.text),
+                  onTap: () {
+                    // _onItemClicked(e, context);
+                  },
+                ),
+              )
               .toList(),
           Gap(8.h),
           const Divider(
             thickness: 0.4,
           ),
           Gap(8.h),
-          // _switchTheme(context),
+          _switchTheme(context),
         ],
       ),
     );
   }
+
+  Widget _switchTheme(BuildContext context) {
+    return ListTile(
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Switch theme',
+            style: context.textTheme.bodyLarge?.copyWith(
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const DarkModeWidget(),
+        ],
+      ),
+      onTap: () {
+        Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+      },
+    );
+  }
+
 }

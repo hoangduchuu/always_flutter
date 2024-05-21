@@ -45,7 +45,7 @@ class PrefKeys {
 
 
 class MaxSizeConstant {
-  static const double maxWidth = 1100;
+  static const double maxWidth = 1200;
 }
 
 class SizeConstant {
