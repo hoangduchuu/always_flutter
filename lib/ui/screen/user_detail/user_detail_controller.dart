@@ -1,10 +1,11 @@
 import 'package:developerfect_app/domain/user_repository.dart';
+import 'package:developerfect_app/utils/base/base_controller.dart';
 import 'package:developerfect_app/utils/log/my_logger.dart';
 import 'package:get/get.dart';
 
 import 'user_detail_binding.dart';
 
-class UserDetailController extends GetxController {
+class UserDetailController extends BaseController {
   UserDetailController(this._userRepository);
 
   final UserRepository _userRepository;
@@ -17,6 +18,7 @@ class UserDetailController extends GetxController {
   void onInit() {
     super.onInit();
     _getArguments();
+    MyLogger.d("ONINIT FROM UserDetailController");
   }
 
   void _getArguments() {

@@ -14,8 +14,8 @@ class SplashController extends GetxController {
   final SplashBinding binding = SplashBinding();
 
   @override
-  void onReady() {
-    super.onReady();
+  onInit() async {
+    super.onInit();
     LoadingUtils.showProgress();
     Future.delayed(const Duration(seconds: 1), () {
       LoadingUtils.dismiss();

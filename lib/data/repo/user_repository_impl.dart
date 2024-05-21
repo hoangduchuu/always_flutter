@@ -23,7 +23,7 @@ class UserRepositoryImpl implements UserRepository {
 
   @override
   Future<DummyUserModel> login({required String email, required String password}) async {
-    var body = {"username": "kminchelle", "password": "0lelplR", "expiresInMins": 30};
+    var body = {"username": "kminchelle", "password": "0lelplR", "expiresInMins": 1};
     var data = await _dummyclient.makePost('/auth/login', data: body);
     return DummyUserModel.fromJson(data);
   }
