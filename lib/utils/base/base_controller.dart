@@ -8,13 +8,16 @@ abstract class BaseController extends GetxController {
   final _userRepository = Get.find<UserRepository>();
 
   @override
-  void onInit() {
-    super.onInit();
+  void onReady() {
+    super.onReady();
     _checkLogin();
   }
 
+
+
   Future<void> _checkLogin() async {
-    if (appPrefs.userToken != '') {
+    if (appPrefs.
+    userToken != '') {
       try {
         var user = await _userRepository.getDumMe();
       } catch (e) {
