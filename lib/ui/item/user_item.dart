@@ -24,7 +24,7 @@ class UserItem extends StatelessWidget {
           },
           child: ListTile(
             title: Text(user.name),
-            subtitle: Text(user.email),
+            subtitle: Text('Email: ${user.email}'),
             leading: CircleAvatar(
               child: 1 == 1
                   ? Image.network(user.avatar)
