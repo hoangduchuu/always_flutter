@@ -1,3 +1,4 @@
+import 'package:developerfect_app/utils/common/system_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +14,7 @@ class _DarkModeWidgetState extends State<DarkModeWidget> {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+        SystemUtils.changeTheme();
       },
       icon: Icon(
         !Get.isDarkMode ? Icons.light_mode : Icons.mode_night,

@@ -1,3 +1,4 @@
+import 'package:developerfect_app/utils/common/system_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +22,7 @@ class LoginScreen extends GetWidget<LoginController> {
               onPressed: () {
                 controller.login();
               },
-              child: const Text('Login'),
+              child:  Text('K_1_Hello'.tr),
             ),
             ElevatedButton(
               onPressed: () {

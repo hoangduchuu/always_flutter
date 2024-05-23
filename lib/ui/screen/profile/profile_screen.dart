@@ -2,6 +2,7 @@ import 'package:developerfect_app/ui/item/toolbar_item.dart';
 import 'package:developerfect_app/ui/screen/profile/m/body.dart';
 import 'package:developerfect_app/ui/widget/dark_mode_widget.dart';
 import 'package:developerfect_app/ui/widget/toolbar_text_widget.dart';
+import 'package:developerfect_app/utils/common/system_utils.dart';
 import 'package:developerfect_app/utils/constants.dart';
 import 'package:developerfect_app/utils/ext/responsive_ext.dart';
 import 'package:developerfect_app/utils/log/my_logger.dart';
@@ -91,16 +92,14 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         children: [
           Gap(16.h),
-          ..._generateToolbarItem()
-              .map(
-                (e) => ListTile(
-                  title: Text(e.text),
-                  onTap: () {
-                    // _onItemClicked(e, context);
-                  },
-                ),
-              )
-              ,
+          ..._generateToolbarItem().map(
+            (e) => ListTile(
+              title: Text(e.text),
+              onTap: () {
+                // _onItemClicked(e, context);
+              },
+            ),
+          ),
           Gap(8.h),
           const Divider(
             thickness: 0.4,
@@ -127,9 +126,8 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       onTap: () {
-        Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+        SystemUtils.changeTheme();
       },
     );
   }
-
 }
