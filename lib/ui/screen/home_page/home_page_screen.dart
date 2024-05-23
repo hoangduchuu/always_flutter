@@ -47,6 +47,13 @@ class HomePageScreen extends GetWidget<HomePageController> {
                       },
                     ),
                     ListTile(
+                      title: const Text('Go to TGDD'),
+                      onTap: () {
+                        Get.back();
+                        AppNavigators.gotoTGDDHome();
+                      },
+                    ),
+                    ListTile(
                       title: const Text('Item 2'),
                       onTap: () {
                         Navigator.pop(context);

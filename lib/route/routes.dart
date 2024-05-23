@@ -11,6 +11,8 @@ import 'package:developerfect_app/ui/screen/profile/profile_binding.dart';
 import 'package:developerfect_app/ui/screen/profile/profile_screen.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_binding.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_screen.dart';
+import 'package:developerfect_app/ui/screen/tgdd/t_g_d_d_home/tgdd_home_screen.dart';
+import 'package:developerfect_app/ui/screen/tgdd/t_g_d_d_home/tggd_home_binding.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_binding.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_screen.dart';
 import 'package:get/get.dart';
@@ -75,6 +77,15 @@ final routes = [
     bindings: [
       MainBinding(),
       ProfileBinding(),
+    ],
+    transition: Transition.fadeIn,
+  ),
+  GetPage(
+    name: RouteName.tgddHome,
+    page: () => const TGDDHomeScreen(),
+    bindings: [
+      MainBinding(),
+      TGDDHomeBinding(),
     ],
     transition: Transition.fadeIn,
   ),

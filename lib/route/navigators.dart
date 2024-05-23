@@ -21,4 +21,8 @@ class AppNavigators {
   static Future<dynamic>? gotoProfile() {
     return Get.toNamed(RouteName.profile);
   }
+
+  static Future<dynamic>? gotoTGDDHome() {
+    return Get.toNamed(RouteName.tgddHome);
+  }
 }
