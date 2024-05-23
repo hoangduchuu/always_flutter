@@ -2,6 +2,10 @@ import 'package:developerfect_app/route/route_name.dart';
 import 'package:get/get.dart';
 
 class AppNavigators {
+  static Future<dynamic>? gotoUnknow() {
+    return Get.toNamed(RouteName.unknown);
+  }
+
   static Future<dynamic>? gotoHome() {
     return Get.offAllNamed(RouteName.home);
   }

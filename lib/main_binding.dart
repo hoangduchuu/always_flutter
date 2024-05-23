@@ -1,5 +1,6 @@
 import 'package:developerfect_app/data/api/dummy_network_client.dart';
 import 'package:developerfect_app/data/api/network_client.dart';
+import 'package:developerfect_app/ui/screen/unknown/unknown_controller.dart';
 import 'package:developerfect_app/utils/configs.dart';
 import 'package:developerfect_app/utils/log/dio_logger.dart';
 import 'package:dio/dio.dart';
@@ -53,6 +54,7 @@ class MainBinding extends Bindings {
       Get.put(DummyHTTPProvider(), permanent: true,tag: 'dummy');
     }
     //endregion Ensure HTTPProvider is put properly
+    Get.lazyPut(() => UnknownController());
     FlutterNativeSplash.remove();
   }
 }

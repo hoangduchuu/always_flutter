@@ -1,6 +1,7 @@
 import 'package:developerfect_app/main_binding.dart';
 import 'package:developerfect_app/route/route_name.dart';
 import 'package:developerfect_app/route/routes.dart';
+import 'package:developerfect_app/ui/screen/unknown/unknown_screen.dart';
 import 'package:developerfect_app/utils/common/system_utils.dart';
 import 'package:developerfect_app/utils/loading_utils.dart';
 import 'package:developerfect_app/utils/pref_utils.dart';
@@ -85,6 +86,7 @@ class MyApp extends StatelessWidget {
           //region routes configs
           getPages: routes,
           initialRoute: RouteName.splash,
+          unknownRoute: GetPage(name: RouteName.unknown, page: () => UnknownScreen()),
           initialBinding: MainBinding(),
           //region theme configs
         ),

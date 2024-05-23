@@ -12,11 +12,21 @@ import 'package:developerfect_app/ui/screen/splash/splash_binding.dart';
 import 'package:developerfect_app/ui/screen/splash/splash_screen.dart';
 import 'package:developerfect_app/ui/screen/tgdd/t_g_d_d_home/tgdd_home_screen.dart';
 import 'package:developerfect_app/ui/screen/tgdd/t_g_d_d_home/tggd_home_binding.dart';
+import 'package:developerfect_app/ui/screen/unknown/unknown_binding.dart';
+import 'package:developerfect_app/ui/screen/unknown/unknown_screen.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_binding.dart';
 import 'package:developerfect_app/ui/screen/user_detail/user_detail_screen.dart';
 import 'package:get/get.dart';
 
 final routes = [
+  GetPage(
+    name: RouteName.unknown,
+    page: () => const UnknownScreen(),
+    bindings: [
+      MainBinding(),
+      UnknownBinding(),
+    ],
+  ),
   GetPage(
     name: RouteName.splash,
     page: () => const SplashScreen(),
