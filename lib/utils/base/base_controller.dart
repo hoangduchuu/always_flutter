@@ -1,6 +1,5 @@
 import 'package:developerfect_app/domain/user_repository.dart';
 import 'package:developerfect_app/route/navigators.dart';
-import 'package:developerfect_app/utils/log/my_logger.dart';
 import 'package:developerfect_app/utils/pref_utils.dart';
 import 'package:get/get.dart';
 

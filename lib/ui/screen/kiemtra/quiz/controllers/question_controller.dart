@@ -1,8 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:developerfect_app/model/question_model.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/score/score_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 
 // We use get package for our state management
 
@@ -13,13 +14,13 @@ class QuestionController extends GetxController with SingleGetTickerProviderMixi
   Animation? _animation;
 
   // so that we can access our animation outside
-  Animation? get animation => this._animation;
+  Animation? get animation => _animation;
 
   late PageController _pageController;
 
-  PageController get pageController => this._pageController;
+  PageController get pageController => _pageController;
 
-  List<Question> _questions = sample_data
+  List<Question> _questions = sampleData
       .map(
         (question) => Question(
             id: question['id'],
@@ -29,35 +30,35 @@ class QuestionController extends GetxController with SingleGetTickerProviderMixi
       )
       .toList();
 
-  List<Question> get questions => this._questions;
+  List<Question> get questions => _questions;
 
   bool _isAnswered = false;
 
-  bool get isAnswered => this._isAnswered;
+  bool get isAnswered => _isAnswered;
 
   late int _correctAns;
 
-  int get correctAns => this._correctAns;
+  int get correctAns => _correctAns;
 
   late int _selectedAns;
 
-  int get selectedAns => this._selectedAns;
+  int get selectedAns => _selectedAns;
 
   // for more about obs please check documentation
   RxInt _questionNumber = 1.obs;
 
-  RxInt get questionNumber => this._questionNumber;
+  RxInt get questionNumber => _questionNumber;
 
   int _numOfCorrectAns = 0;
 
-  int get numOfCorrectAns => this._numOfCorrectAns;
+  int get numOfCorrectAns => _numOfCorrectAns;
 
   // called immediately after the widget is allocated memory
   @override
   void onInit() {
     // Our animation duration is 60 s
     // so our plan is to fill the progress bar within 60s
-    _animationController = AnimationController(duration: Duration(seconds: 30), vsync: this);
+    _animationController = AnimationController(duration: const Duration(seconds: 30), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController!)
       ..addListener(() {
         // update like setState
@@ -92,7 +93,7 @@ class QuestionController extends GetxController with SingleGetTickerProviderMixi
     update();
 
     // Once user select an ans after 3s it will go to the next qn
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       nextQuestion();
     });
   }
@@ -100,7 +101,7 @@ class QuestionController extends GetxController with SingleGetTickerProviderMixi
   void nextQuestion() {
     if (_questionNumber.value != _questions.length) {
       _isAnswered = false;
-      _pageController.nextPage(duration: Duration(milliseconds: 250), curve: Curves.ease);
+      _pageController.nextPage(duration: const Duration(milliseconds: 250), curve: Curves.ease);
 
       // Reset the counter
       _animationController?.reset();
@@ -110,7 +111,7 @@ class QuestionController extends GetxController with SingleGetTickerProviderMixi
       _animationController?.forward().whenComplete(nextQuestion);
     } else {
       // Get package provide us simple way to naviigate another page
-      Get.to(ScoreScreen());
+      Get.to(const ScoreScreen());
     }
   }
 

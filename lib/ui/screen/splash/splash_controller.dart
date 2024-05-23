@@ -3,7 +3,6 @@ import 'package:developerfect_app/route/navigators.dart';
 import 'package:developerfect_app/utils/loading_utils.dart';
 import 'package:developerfect_app/utils/log/my_logger.dart';
 import 'package:developerfect_app/utils/pref_utils.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 
 import 'splash_binding.dart';

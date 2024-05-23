@@ -1,5 +1,7 @@
 // Light and dark ColorSchemes made by FlexColorScheme v7.3.1.
 // These ColorScheme objects require Flutter 3.7 or later.
+// ignore_for_file: deprecated_member_use
+
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 

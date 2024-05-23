@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:developerfect_app/model/question_model.dart';
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/controllers/question_controller.dart';
 import 'package:developerfect_app/utils/constants.dart';
@@ -8,10 +10,10 @@ import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
   const QuestionCard({
-    Key? key,
+    super.key,
     // it means we have to pass this
     required this.question,
-  }) : super(key: key);
+  });
 
   final Question question;
 
@@ -19,16 +21,16 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      padding: EdgeInsets.all(kDefaultPadding),
+      margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
         children: [
-          Text(question.question, style: TextStyle(color: kBlackColor)),
-          SizedBox(height: kDefaultPadding / 2),
+          Text(question.question, style: const TextStyle(color: kBlackColor)),
+          const SizedBox(height: kDefaultPadding / 2),
           ...List.generate(
             question.options.length,
             (index) => Option(

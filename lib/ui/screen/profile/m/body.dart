@@ -84,7 +84,7 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ).value,
-              controller: new ScrollController(keepScrollOffset: false),
+              controller: ScrollController(keepScrollOffset: false),
               shrinkWrap: true,
               children: List.generate(100, (index) {
                 return Container(

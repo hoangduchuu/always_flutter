@@ -9,13 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:responsive_framework/responsive_framework.dart' as rf;
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'profile_controller.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
         title: _appBarContent(context),
       ),
       endDrawer: _endDrawer(context),
-      body: Body(),
+      body: const Body(),
     );
   }
 
@@ -101,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                   },
                 ),
               )
-              .toList(),
+              ,
           Gap(8.h),
           const Divider(
             thickness: 0.4,

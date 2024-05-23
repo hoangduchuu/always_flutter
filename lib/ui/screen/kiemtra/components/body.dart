@@ -1,8 +1,8 @@
-import 'package:developerfect_app/generated/assets.dart';
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:developerfect_app/ui/screen/kiemtra/quiz/controllers/question_controller.dart';
 import 'package:developerfect_app/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import 'progress_bar.dart';
@@ -10,8 +10,8 @@ import 'question_card.dart';
 
 class Body extends StatelessWidget {
   const Body({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
         Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -36,35 +36,35 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: kDefaultPadding),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: ProgressBar(),
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Obx(
                   () => Text.rich(
                     TextSpan(
                       text: "Question ${_questionController.questionNumber.value}",
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       children: [
                         TextSpan(
                           text: "/${_questionController.questions.length}",
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ],
                     ),
                   ),
                 ),
               ),
-              Divider(thickness: 1.5),
-              SizedBox(height: kDefaultPadding),
+              const Divider(thickness: 1.5),
+              const SizedBox(height: kDefaultPadding),
               Expanded(
                 child: PageView.builder(
                   // Block swipe to next qn
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   controller: _questionController.pageController,
                   onPageChanged: _questionController.updateTheQnNum,
                   itemCount: _questionController.questions.length,

@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:developerfect_app/route/navigators.dart';
 import 'package:developerfect_app/ui/item/user_item.dart';
@@ -60,7 +59,7 @@ class HomePageScreen extends GetWidget<HomePageController> {
                       },
                     ),
                     ListTile(
-                      title:  Text('Change theme'),
+                      title:  const Text('Change theme'),
                       onTap: () {
                         Get.changeTheme(Get.isDarkMode? ThemeData.light(): ThemeData.dark());
                         Get.back();

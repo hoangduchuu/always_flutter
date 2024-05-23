@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'tgdd_home_controller.dart';
 
 class TGDDHomeScreen extends StatelessWidget {
-  const TGDDHomeScreen({Key? key}) : super(key: key);
+  const TGDDHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,9 @@ class TGDDHomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('TGDD Home Screen'),
+        title: const Text('TGDD Home Screen'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

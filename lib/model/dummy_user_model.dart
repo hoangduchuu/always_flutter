@@ -1,14 +1,10 @@
 import 'dart:convert';
-import 'dart:math';
 
-import 'package:developerfect_app/model/address_model.dart';
-import 'package:developerfect_app/model/company_model.dart';
 
 // To parse this JSON data, do
 //
 //     final dummyUserModel = dummyUserModelFromJson(jsonString);
 
-import 'dart:convert';
 
 DummyUserModel dummyUserModelFromJson(String str) => DummyUserModel.fromJson(json.decode(str));
 
