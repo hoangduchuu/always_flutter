@@ -71,14 +71,14 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  List<ToolbarItem> _generateToolbarItem() {
+  List<ToolbarItemModel> _generateToolbarItem() {
     return [
-      ToolbarItem(text: 'About', onTap: () => _changeToIndex(1)),
-      ToolbarItem(text: 'Services', onTap: () => _changeToIndex(2)),
-      ToolbarItem(text: 'Skills', onTap: () => _changeToIndex(3)),
-      ToolbarItem(text: 'Projects', onTap: () => _changeToIndex(4)),
-      ToolbarItem(text: 'Blog', onTap: () => _changeToIndex(5)),
-      ToolbarItem(text: 'Contact', onTap: () => _changeToIndex(6)),
+      ToolbarItemModel(text: 'About', onTap: () => _changeToIndex(1)),
+      ToolbarItemModel(text: 'Services', onTap: () => _changeToIndex(2)),
+      ToolbarItemModel(text: 'Skills', onTap: () => _changeToIndex(3)),
+      ToolbarItemModel(text: 'Projects', onTap: () => _changeToIndex(4)),
+      ToolbarItemModel(text: 'Blog', onTap: () => _changeToIndex(5)),
+      ToolbarItemModel(text: 'Contact', onTap: () => _changeToIndex(6)),
     ];
   }
 

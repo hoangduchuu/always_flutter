@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ToolbarItem {
+class ToolbarItemModel {
   final String text;
   final GestureTapCallback? onTap;
 
-  ToolbarItem({
+  ToolbarItemModel({
     required this.text,
     this.onTap,
   });

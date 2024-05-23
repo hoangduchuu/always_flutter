@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class ToolbarTextWidget extends StatelessWidget {
   final String text;
@@ -18,7 +19,12 @@ class ToolbarTextWidget extends StatelessWidget {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       onTap: onTap,
-      child: Text(text),
-    );
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.scrim,
+        ),
+      ),
+    ).animate().slideY().scale();
   }
 }
